@@ -9,8 +9,15 @@ public class MovementCommand : MonoBehaviour,ICommand
     private readonly float deltaTime;
     private readonly Transform transformTarget;
 
+    public MovementCommand(Vector3 direction,float speed, float deltaTime,Transform ttarget){
+        this.direction = direction;
+        this.speed = speed;
+        this.deltaTime = deltaTime;
+        transformTarget = ttarget;
+    }
 
-    public void Move(){
+
+    public void Execute(){
         transformTarget.position +=  direction * (speed * deltaTime);
     }
 }
