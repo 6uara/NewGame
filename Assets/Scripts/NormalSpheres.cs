@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.AI;
 
-public class Sphere : MonoBehaviour,ISpheres
+public class NormalSpheres : MonoBehaviour,ISpheres
 {   
     [SerializeField]private PTypes type { get; }
     [SerializeField] private Rigidbody rb;
@@ -12,6 +11,7 @@ public class Sphere : MonoBehaviour,ISpheres
     [SerializeField] private LevelManager lvlManager;
     [SerializeField] private int damage;
     private void Start() {}
+    //private void NormalSpheres(){}
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player")){

@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.AI;
 
-public class Sphere : MonoBehaviour,ISpheres
+public class FastSphere : MonoBehaviour,ISpheres
 {   
     [SerializeField]private PTypes type { get; }
     [SerializeField] private Rigidbody rb;
@@ -25,9 +24,6 @@ public class Sphere : MonoBehaviour,ISpheres
         Die();
     }
 
-    private void SphereAction(){}
-    public void Die()
-    {
-
-    }
+    private void SphereAction(){ lvlManager.FastTime();}
+    public void Die(){}
 }

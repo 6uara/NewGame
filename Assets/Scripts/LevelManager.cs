@@ -21,4 +21,7 @@ public class LevelManager : MonoBehaviour
     {
         points += puntos;
     }
+
+    public void SlowTime(){}
+    public void FastTime(){}
 }

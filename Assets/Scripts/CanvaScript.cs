@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CanvaScript : MonoBehaviour
 {
-    [SerializeField] private Player pj; //deberia ser el lvl manager, no el pj
+    [SerializeField] private LevelManager lvlManager; //deberia ser el lvl manager, no el pj
     [SerializeField] private GameObject Time;
     [SerializeField] private GameObject Damage;
     [SerializeField] private GameObject Points;
     // Start is called before the first frame update
     void Start()
     {
-        pj.OnPointsUpdate += updatePoints;// deberia ser el lvl manager, no el Pj
+        //lvlManager.OnPointsUpdate += updatePoints;// deberia ser el lvl manager, no el Pj
     }
 
     // Update is called once per frame

@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.AI;
 
-public class Sphere : MonoBehaviour,ISpheres
+public class ExplosiveSphere : MonoBehaviour,ISpheres
 {   
     [SerializeField]private PTypes type { get; }
     [SerializeField] private Rigidbody rb;
@@ -20,14 +19,11 @@ public class Sphere : MonoBehaviour,ISpheres
             SphereAction();
         }else{
             Debug.Log("Crashed");
-            lvlManager.UpdateDamage(damage);
+            //lvlManager.UpdateDamage(damage);
         }
         Die();
     }
 
-    private void SphereAction(){}
-    public void Die()
-    {
-
-    }
+    private void SphereAction(){lvlManager.UpdateDamage(damage + 10);}
+    public void Die(){}
 }
