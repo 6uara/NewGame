@@ -2,6 +2,7 @@ public class SphereSpawner:AbstractFactory
 {
     public override Sphere CreateProduct(PTypes types)
     {
+        /*
         switch(types)
         {
             case PTypes.Normal:
@@ -11,6 +12,7 @@ public class SphereSpawner:AbstractFactory
             case PTypes.Small:
                 return new Sphere("Small");
         }   
+        */
         return null;  
     }
 }
