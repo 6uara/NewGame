@@ -13,6 +13,11 @@ public class LevelManager : MonoBehaviour
         damage = 0;
         time = 600;
     }
+
+    private void Update() 
+    {
+
+    }
     public void UpdateDamage(int daño)
     {
         damage += daño;
@@ -22,6 +27,6 @@ public class LevelManager : MonoBehaviour
         points += puntos;
     }
 
-    public void SlowTime(){}
-    public void FastTime(){}
+    public void SlowTime(){Time.timeScale = 0.8f;}
+    public void FastTime(){Time.timeScale = 1.2f;}
 }
