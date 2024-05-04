@@ -25,5 +25,5 @@ public class SlowSphere : MonoBehaviour,ISpheres
     }
 
     private void SphereAction(){lvlManager.SlowTime();}
-    public void Die(){}
+    public void Die(){Destroy(gameObject);}
 }

@@ -25,5 +25,5 @@ public class ExplosiveSphere : MonoBehaviour,ISpheres
     }
 
     private void SphereAction(){lvlManager.UpdateDamage(damage + 10);}
-    public void Die(){}
+    public void Die(){Destroy(gameObject);}
 }

@@ -28,6 +28,6 @@ public class NormalSpheres : MonoBehaviour,ISpheres
     private void SphereAction(){}
     public void Die()
     {
-
+        Destroy(gameObject);
     }
 }

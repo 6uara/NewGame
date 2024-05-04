@@ -25,5 +25,5 @@ public class FastSphere : MonoBehaviour,ISpheres
     }
 
     private void SphereAction(){ lvlManager.FastTime();}
-    public void Die(){}
+    public void Die(){Destroy(gameObject);}
 }
