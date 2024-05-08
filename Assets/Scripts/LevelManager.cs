@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private int points {get ; set ;}
-    [SerializeField] private int damage;
-    [SerializeField] private float time;
+    public int points {get ; set ;}
+    public int damage {get ; set ;}
+    public float time {get ; set ;}
+
     private void Start()
     {
         points = 0;
@@ -16,17 +17,19 @@ public class LevelManager : MonoBehaviour
 
     private void Update() 
     {
-
+        time -= Time.deltaTime;
     }
     public void UpdateDamage(int daño)
     {
         damage += daño;
+        Debug.Log("Damage Updated");
     }
     public void UpdatePoints(int puntos)
     {
         points += puntos;
+        Debug.Log("Points Updated");
     }
 
-    public void SlowTime(){Time.timeScale = 0.8f;}
-    public void FastTime(){Time.timeScale = 1.2f;}
+    public void SlowTime(){Time.timeScale -= 0.2f;}
+    public void FastTime(){Time.timeScale += 0.2f;}
 }

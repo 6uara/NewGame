@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -484.8, y: 242.6}
+  m_AnchoredPosition: {x: -450.5, y: 232}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43219226
@@ -661,7 +661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 488.5, y: -247}
+  m_AnchoredPosition: {x: 450.5, y: -232}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078589543
@@ -796,7 +796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 247}
+  m_AnchoredPosition: {x: 0, y: 232}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158775238
@@ -1012,10 +1012,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4597223f4d6aadb8962ff98c3c82312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlManager: {fileID: 0}
-  Time: {fileID: 0}
-  Damage: {fileID: 0}
-  Points: {fileID: 0}
+  lvlManager: {fileID: 8940540457145506794}
+  Time: {fileID: 1158775238}
+  Damage: {fileID: 1078589543}
+  Points: {fileID: 43219226}
 --- !u!1 &1439093940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,7 +1233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142296569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.182, y: 7.97, z: -2.141}
+  m_LocalPosition: {x: 0.182, y: 7.97, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1286,7 +1286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6252439202300534936, guid: 2bc0823dbf93e5e418300dfdce3ee39f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.09
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6252439202300534936, guid: 2bc0823dbf93e5e418300dfdce3ee39f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1381,9 +1381,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8940540458116806609, guid: 9b487eeba0c06ce43bb48ebaa901d12a, type: 3}
+      propertyPath: time
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940540458116806609, guid: 9b487eeba0c06ce43bb48ebaa901d12a, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1402123752}
     - target: {fileID: 8940540458116806622, guid: 9b487eeba0c06ce43bb48ebaa901d12a, type: 3}
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b487eeba0c06ce43bb48ebaa901d12a, type: 3}
+--- !u!114 &8940540457145506794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8940540458116806609, guid: 9b487eeba0c06ce43bb48ebaa901d12a, type: 3}
+  m_PrefabInstance: {fileID: 8940540457145506793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08524dcd5931fc84386ac0c82f03da77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
