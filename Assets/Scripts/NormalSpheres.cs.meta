@@ -3,7 +3,9 @@ guid: f09954d5fd4af1c4a9133feea710f6f6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - lvlManager: {fileID: 8940540458116806609, guid: 9b487eeba0c06ce43bb48ebaa901d12a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

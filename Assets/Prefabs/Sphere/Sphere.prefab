@@ -128,7 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 830736721467639549}
-  points: 0
-  speed: 0
-  lvlManager: {fileID: 8940540458116806609, guid: 9b487eeba0c06ce43bb48ebaa901d12a, type: 3}
-  damage: 0
+  points: 10
+  damage: 5

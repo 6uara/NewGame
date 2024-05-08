@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CanvaScript : MonoBehaviour
 {
-    [SerializeField] private LevelManager lvlManager; //deberia ser el lvl manager, no el pj
     [SerializeField] private TMP_Text Time;
     [SerializeField] private TMP_Text Damage;
     [SerializeField] private TMP_Text Points;
@@ -25,7 +24,16 @@ public class CanvaScript : MonoBehaviour
     }
 
 
-    public void UpdatePoints(){Points.text = lvlManager.points.ToString();}
-    public void UpdateTime(){Time.text = lvlManager.time.ToString();}
-    public void UpdateDamage(){Damage.text = lvlManager.damage.ToString();}
+    public void UpdatePoints()
+    {
+        Points.text = "Points "+LevelManager.Instance.points.ToString();
+    }
+    public void UpdateTime()
+    {
+        Time.text = "Time "+ LevelManager.Instance.time.ToString();
+    }
+    public void UpdateDamage()
+    {
+        Damage.text = "Damage "+LevelManager.Instance.damage.ToString();
+    }
 }

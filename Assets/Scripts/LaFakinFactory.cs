@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaFakinFactory : MonoBehaviour
 {
-    public GameObject spherePrefab; // Assign your Sphere prefab in the Inspector
+    public GameObject[] spherePrefab; // Assign your Sphere prefab in the Inspector
     public float spawnInterval = 5.0f; // Set the spawn interval to 5 seconds
     [SerializeField] private GameObject[] SpawnPoints;
 
@@ -12,9 +12,10 @@ public class LaFakinFactory : MonoBehaviour
     public void Produce(){
         var sSpawner = new SphereSpawner();
         Sphere newSphere = (Sphere)sSpawner.CreateProduct(PTypes.Normal);
-        int indexNumber = Random.Range(0, 5);  
+        int indexNumber = Random.Range(0, 5);
+        int prefabIndex = Random.Range(0,5);  
         // Instantiate the prefab instead of the Sphere class directly
-        GameObject sphereInstance = Instantiate(spherePrefab, SpawnPoints[indexNumber].transform.position, transform.rotation);
+        GameObject sphereInstance = Instantiate(spherePrefab[prefabIndex], SpawnPoints[indexNumber].transform.position, transform.rotation);
     }
 
     private void Update() {

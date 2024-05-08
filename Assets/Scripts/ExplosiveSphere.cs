@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class ExplosiveSphere : MonoBehaviour,ISpheres
 {   
-    [SerializeField]private PTypes type { get; }
     [SerializeField] private Rigidbody rb;
     [SerializeField] private int points;
-    [SerializeField] private float speed;
-    [SerializeField] private LevelManager lvlManager;
     [SerializeField] private int damage;
     private void Start() {}
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player")){
             Debug.Log("Player Catched");
-            lvlManager.UpdatePoints(points);
+            LevelManager.Instance.UpdatePoints(points);
             SphereAction();
         }else{
             Debug.Log("Crashed");
@@ -24,6 +21,6 @@ public class ExplosiveSphere : MonoBehaviour,ISpheres
         Die();
     }
 
-    private void SphereAction(){lvlManager.UpdateDamage(damage + 10);}
+    private void SphereAction(){LevelManager.Instance.UpdateDamage(damage + 10);}
     public void Die(){Destroy(gameObject);}
 }
