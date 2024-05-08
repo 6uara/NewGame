@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3706701556751328439}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 830736721467639550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.26, y: 7.69, z: -2.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,6 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09954d5fd4af1c4a9133feea710f6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 830736721467639549}
-  points: 10
-  damage: 5
+  EnemyInfo: {fileID: 11400000, guid: 2377093e0f72ce243bf207bfee0daf12, type: 2}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,15 +12,19 @@ public class LevelManager : MonoBehaviour
     private bool checkpoint1 = true;
     private bool checkpoint2 = true;
 
-    private static LevelManager _instance; // Private static instance
+    private static LevelManager _instance; 
+    public IListener canvasn;
 
-    public static LevelManager Instance  // Public getter method
-    {
+
+    public event Action Eventos;
+
+    public static LevelManager Instance  
+    { 
         get
         {
             if (_instance == null)
             {
-                _instance = FindObjectOfType<LevelManager>(); // Find the LevelManager object in the scene
+                _instance = FindObjectOfType<LevelManager>(); 
                 if (_instance == null)
                 {
                     Debug.LogError("LevelManager instance not found in the scene!");
@@ -29,38 +34,41 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // Your other LevelManager properties and methods...
 
-    void Awake() // Use Awake instead of Start to ensure instance is set up before other scripts access it
+    void Awake() 
     {
-        if (_instance != null && _instance != this) // Check for duplicate instances
+        if (_instance != null && _instance != this) 
         {
-            Destroy(gameObject); // Destroy this instance if another LevelManager exists
+            Destroy(gameObject); 
             return;
         }
 
-        _instance = this; // Set the static instance
+        _instance = this; 
     }
 
     private void Start()
     {
         points = 0;
         damage = 0;
-        time = 300 / 60 ;
+        time = 60 / 60 ;
     }
 
     private void Update() 
     {
         time -=   Time.deltaTime / 60;
+        if(time <= 0)
+        {}
     }
     public void UpdateDamage(int daño)
     {
         damage += daño;
+        Eventos?.Invoke();
         Debug.Log("Damage Updated");
     }
     public void UpdatePoints(int puntos)
     {
         points += puntos;
+        Eventos?.Invoke();
         Debug.Log("Points Updated");
         if(points> 200m && checkpoint1)
         {

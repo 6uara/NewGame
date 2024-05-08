@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3335568590500584777}
   m_Layer: 0
   m_Name: SmallSphere
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09954d5fd4af1c4a9133feea710f6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: -395911256064725779}
-  points: 20
-  damage: 5
+  EnemyInfo: {fileID: 11400000, guid: 2377093e0f72ce243bf207bfee0daf12, type: 2}
