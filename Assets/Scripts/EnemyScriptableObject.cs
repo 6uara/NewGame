@@ -4,11 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerScriptableObject", menuName = "Player Info")]
 public class EnemyScriptableObject : ScriptableObject
 {
-    [SerializeField] private float baseSphereSpeed { get;  }
-    [SerializeField] private int baseSpherePoints  { get;  }
-    [SerializeField] private float FriendlySphereDamage { get;  }
-    [SerializeField] private float ExplosiveDamage  { get;  }
-    [SerializeField] private int SpecialPoints  { get;  }
-    [SerializeField] private int BigSphereSpeed  { get;  }
-    [SerializeField] private int SmallSphereSpeed  { get;  }
+    [SerializeField] private int SpherePoints{get;}
+    [SerializeField] private float SphereDamage{get;}
+    [SerializeField] private int ExplosivePoints{get;}
+    [SerializeField] private float ExplosiveDamage{get;}
+    [SerializeField] private int SpecialPoints{get;}
+    [SerializeField] private int BigSphereDamage{get;}
+    [SerializeField] private int SmallSphereDamage{get;}
 }
