@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
     public int damage{get;set;}
     public float time{get;set;}
 
+    private bool checkpoint1 = true;
+    private bool checkpoint2 = true;
 
     private static LevelManager _instance; // Private static instance
 
@@ -50,7 +52,6 @@ public class LevelManager : MonoBehaviour
     private void Update() 
     {
         time -=   Time.deltaTime / 60;
-        
     }
     public void UpdateDamage(int daño)
     {
@@ -61,13 +62,15 @@ public class LevelManager : MonoBehaviour
     {
         points += puntos;
         Debug.Log("Points Updated");
-        if(points> 200)
+        if(points> 200m && checkpoint1)
         {
             FastTime();
+            checkpoint1 = false;
         }
-        if(points > 500)
+        if(points > 500 && checkpoint2)
         {
             FastTime();
+            checkpoint2 = false;
         }
     }
 
