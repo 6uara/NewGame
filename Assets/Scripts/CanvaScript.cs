@@ -9,14 +9,14 @@ public class CanvaScript : MonoBehaviour
     [SerializeField] private TMP_Text Time;
     [SerializeField] private TMP_Text Damage;
     [SerializeField] private TMP_Text Points;
-    // Start is called before the first frame update
-    void Awake() // Register listener in Awake
+   
+    void Awake() 
     {
-        LevelManager.Instance.Eventos += UpdateUI; // Register for LevelManager events
+        LevelManager.Instance.Eventos += UpdateUI;
+        LevelManager.Instance.final += setfalse; 
     }
 
-    // Update is called once per frame
-    public void UpdateUI() // Update function triggered by LevelManager events
+    public void UpdateUI() 
     {
         UpdatePoints();
         UpdateDamage();

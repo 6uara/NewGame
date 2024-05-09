@@ -18,6 +18,8 @@ public class LevelManager : MonoBehaviour
 
     public event Action Eventos;
 
+    public event Action final;
+
     public static LevelManager Instance  
     { 
         get
@@ -57,7 +59,9 @@ public class LevelManager : MonoBehaviour
     {
         time -=   Time.deltaTime / 60;
         if(time <= 0)
-        {}
+        {
+            final?.Invoke();    
+        }
     }
     public void UpdateDamage(int daño)
     {

@@ -18,6 +18,7 @@ public class LaFakinFactory : MonoBehaviour
     {
         sSpawner = new SphereSpawner();
         sSpawner.setSpawner(spherePrefab);
+        LevelManager.Instance.final += setfalse;
     }
     public void Produce(){
         type = (PTypes)Random.Range(0, 6);
@@ -34,6 +35,11 @@ public class LaFakinFactory : MonoBehaviour
             Produce();
             timer = 0; 
         }
+    }
+
+    public void setfalse()
+    {
+        gameObject.SetActive(false);
     }
 }
 

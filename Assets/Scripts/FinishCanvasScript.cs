@@ -6,13 +6,16 @@ using UnityEngine;
 public class FinishCanvasScript : MonoBehaviour
 {
     [SerializeField] private TMP_Text Total;
+
+    private void Awake() {
+        LevelManager.Instance.final += settrue;
+        gameObject.SetActive(false);
+    }
     public void settrue()
     {
         setPoints();
         gameObject.SetActive(true);
     }
-
-    public void setfalse(){}
 
     public void setPoints()
     {
