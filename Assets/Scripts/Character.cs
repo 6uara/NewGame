@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
+    [SerializeField] private MiscScriptable miscInfo;
     [SerializeField] private MovementCommand movCommand;
     private Vector3 movementInput;
     private int timer;
@@ -30,7 +30,7 @@ public class Character : MonoBehaviour
             if(LevelManager.Instance.coins >= 20)
             {
                 PUpsManager.Instance.SpawnPowerUp();
-                LevelManager.Instance.UpdateCoins(-20);
+                LevelManager.Instance.UpdateCoins(- 20);
             }
         }
     }
@@ -39,14 +39,14 @@ public class Character : MonoBehaviour
     {
         var horizontal = Input.GetAxisRaw("Horizontal");
         movementInput = new Vector3(horizontal,0,0).normalized;
-        movCommand = new MovementCommand(movementInput, movementSpeed,Time.deltaTime,transform);
+        movCommand = new MovementCommand(movementInput, miscInfo.speed,Time.deltaTime,transform);
         EventQueue.Instance.QueueCommand(movCommand);
     }
 
     public void GetBigger()
     {
-        gameObject.transform.localScale = new Vector3(2,2,2);
-        timer = 1000;
+        gameObject.transform.localScale = miscInfo.biggerdimensions;
+        timer = miscInfo.powertimer;
         timerOn = true;
     }
 

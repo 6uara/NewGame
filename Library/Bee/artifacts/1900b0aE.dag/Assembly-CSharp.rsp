@@ -353,6 +353,7 @@
 "Assets/Scripts/Factory/PTypes.cs"
 "Assets/Scripts/Factory/SphereSpawner.cs"
 "Assets/Scripts/FlyWeight/EnemyScriptableObject.cs"
+"Assets/Scripts/FlyWeight/MiscScriptable.cs"
 "Assets/Scripts/FlyWeight/PrefabScriptable.cs"
 "Assets/Scripts/Manager/LevelManager.cs"
 "Assets/Scripts/Manager/PUpsManager.cs"

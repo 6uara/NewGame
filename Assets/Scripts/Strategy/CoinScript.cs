@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour,ICoin,IDestroy
 {
+    [SerializeField] private MiscScriptable miscInfo;
     void OnTriggerEnter(Collider other)
     {
         GainGold();
@@ -12,7 +13,7 @@ public class CoinScript : MonoBehaviour,ICoin,IDestroy
 
     public void GainGold()
     {
-        LevelManager.Instance.UpdateCoins(10);
+        LevelManager.Instance.UpdateCoins(miscInfo.coinvalue);
     }
 
     public void Die()
