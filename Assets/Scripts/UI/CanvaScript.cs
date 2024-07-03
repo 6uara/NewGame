@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CanvaScript : MonoBehaviour
+public class CanvaScript : MonoBehaviour,IListener
 {
     [SerializeField] private TMP_Text Time;
     [SerializeField] private TMP_Text Damage;
@@ -43,9 +43,8 @@ public class CanvaScript : MonoBehaviour
         Damage.text = "Damage "+LevelManager.Instance.damage.ToString();
     }
 
-    public void setfalse(){
-        gameObject.SetActive(false);
-    }
+    public void setfalse(){gameObject.SetActive(false);}
+    public void settrue(){gameObject.SetActive(true);}
     private void UpdateCoins()
     {
         Coins.text = "Coins: "+ LevelManager.Instance.coins;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class FinishCanvasScript : MonoBehaviour
+public class FinishCanvasScript : MonoBehaviour,IListener
 {
     [SerializeField] private TMP_Text Total;
 
@@ -15,6 +15,11 @@ public class FinishCanvasScript : MonoBehaviour
     {
         setPoints();
         gameObject.SetActive(true);
+    }
+    public void setfalse()
+    {
+        setPoints();
+        gameObject.SetActive(false);
     }
 
     public void setPoints()
