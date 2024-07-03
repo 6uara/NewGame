@@ -7,11 +7,32 @@ public class Character : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private MovementCommand movCommand;
     private Vector3 movementInput;
+    private int timer;
+    private bool timerOn;
 
-    // Update is called once per frame
+    void Start()
+    {
+        UIManager.Instance.final += setfalse;
+    }
     void Update()
     {
         MoveCharacter(); 
+        if (timerOn)
+        {
+            timer --;
+            if(timer <= 0)
+            {
+                BacktoNormal();
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(LevelManager.Instance.coins >= 20)
+            {
+                PUpsManager.Instance.SpawnPowerUp();
+                LevelManager.Instance.UpdateCoins(-20);
+            }
+        }
     }
 
     private void MoveCharacter()
@@ -20,5 +41,23 @@ public class Character : MonoBehaviour
         movementInput = new Vector3(horizontal,0,0).normalized;
         movCommand = new MovementCommand(movementInput, movementSpeed,Time.deltaTime,transform);
         EventQueue.Instance.QueueCommand(movCommand);
+    }
+
+    public void GetBigger()
+    {
+        gameObject.transform.localScale = new Vector3(2,2,2);
+        timer = 1000;
+        timerOn = true;
+    }
+
+    private void BacktoNormal()
+    {
+        gameObject.transform.localScale = new Vector3(1,1,1);
+        timerOn = false;
+    }
+
+    public void setfalse()
+    {
+        gameObject.SetActive(false);
     }
 }

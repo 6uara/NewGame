@@ -8,5 +8,7 @@ public enum PTypes
         Small,
         TimeSlow,
         TimeFast,
-        Explosive
+        Explosive,
+        Coin,
+        BiggerPowerUp
     }

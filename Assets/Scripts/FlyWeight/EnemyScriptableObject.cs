@@ -6,6 +6,10 @@ public class EnemyScriptableObject : ScriptableObject
 {
     [SerializeField] private int SpherePoints;
     [SerializeField] private int SphereDamage;
+    [SerializeField] private int SmallSpherePoints;
+    [SerializeField] private int SmallSphereDamage;
+    [SerializeField] private int BigSpherePoints;
+    [SerializeField] private int BigSphereDamage;
     [SerializeField] private int ExplosivePoints;
     [SerializeField] private int ExplosiveDamage;
     [SerializeField] private int SpecialPoints;
@@ -14,6 +18,10 @@ public class EnemyScriptableObject : ScriptableObject
 
     public int spherePoints => SpherePoints;
     public int sphereDamage => SphereDamage;
+    public int smallspherePoints => SmallSpherePoints;
+    public int smallsphereDamage => SmallSphereDamage;
+    public int bigspherePoints => BigSpherePoints;
+    public int bigsphereDamage => BigSphereDamage;
     public int explosivePoints => ExplosivePoints;
     public int explosiveDamage => ExplosiveDamage;
     public int specialPoints => SpecialPoints;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementCommand : MonoBehaviour,ICommand
+public class MovementCommand : ICommand
 {
     private readonly Vector3 direction;
     private readonly float speed;

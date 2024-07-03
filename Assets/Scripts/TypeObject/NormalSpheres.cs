@@ -7,11 +7,19 @@ public class NormalSpheres : Sphere,ISpheres
     public override void Start()
     {
         base.Start();
+        if(transform.localScale.x > 1)
+        {
+            points = EnemyInfo.bigspherePoints;
+            damage = EnemyInfo.bigsphereDamage;
+        }else{
+            if(transform.localScale.x < 1)
+            {
+                points = EnemyInfo.smallspherePoints;
+                damage = EnemyInfo.smallsphereDamage;
+            }
+        }
     }
-    public override void OnTriggerEnter(Collider other) 
-    {
-        base.OnTriggerEnter(other);
-    }
+    public override void OnTriggerEnter(Collider other) {base.OnTriggerEnter(other);}
     public override void SphereAction()
     {
         base.SphereAction();

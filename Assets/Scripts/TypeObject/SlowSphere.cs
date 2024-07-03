@@ -10,10 +10,7 @@ public class SlowSphere : Sphere, ISpheres
         points = EnemyInfo.specialPoints;
         damage = EnemyInfo.slowSphereDamage;
     }
-    public override void OnTriggerEnter(Collider other) 
-    {
-        base.OnTriggerEnter(other);
-    }
+    public override void OnTriggerEnter(Collider other) {base.OnTriggerEnter(other);}
     public override void Die()
     {
         base.Die();

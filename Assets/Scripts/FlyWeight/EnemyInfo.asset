@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpherePoints: 10
   SphereDamage: 5
+  SmallSpherePoints: 15
+  SmallSphereDamage: 2
+  BigSpherePoints: 5
+  BigSphereDamage: 10
   ExplosivePoints: -10
   ExplosiveDamage: 0
   SpecialPoints: 20

@@ -20,13 +20,13 @@ public class SphereSpawner:AbstractFactory
                 return spherePrefab.slowSphere;
             case PTypes.Explosive:
                 return spherePrefab.explosiveSphere;
+            case PTypes.Coin:
+                return spherePrefab.coin;
+            case PTypes.BiggerPowerUp:
+                return spherePrefab.biggerpowerup;
         }   
 
         return null;  
     }
 
-    public void setSpawner(PrefabScriptable pfscr)
-    {
-        spherePrefab = pfscr;
-    }
 }

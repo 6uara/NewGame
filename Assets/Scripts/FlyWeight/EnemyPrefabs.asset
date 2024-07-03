@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2a22506b4e0394687726f70f8008ea, type: 3}
+  m_Name: EnemyPrefabs
+  m_EditorClassIdentifier: 
+  NormalSphere: {fileID: 830736721467639550, guid: 7c513ffbd3cb4544ca4479228a68d313, type: 3}
+  BigSphere: {fileID: 8623854413781817515, guid: ac5ed09e1c1b00048b4b1974906826cd, type: 3}
+  SmallSphere: {fileID: 4932148125492905140, guid: 7fab031295aa24f4c98c953152394eaa, type: 3}
+  FastSphere: {fileID: 5644991324062971189, guid: 32371bce5635f594eb5149f297114df6, type: 3}
+  SlowSphere: {fileID: 6558100506251223994, guid: 8b0c021187c0ce04d9c3f0bccabe07d8, type: 3}
+  ExplosiveSphere: {fileID: 6969921082208429517, guid: 635033dca3e71a04798447c0b01082a4, type: 3}
+  Coin: {fileID: 2575936187725362444, guid: 50f6a4ecaefa5f944ba252bbb88cdd47, type: 3}
+  BiggerPowerUp: {fileID: 3420918378607194004, guid: be67762c94c62e24c9da90056a22e8d3, type: 3}

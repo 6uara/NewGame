@@ -9,10 +9,7 @@ public class FastSphere : Sphere,ISpheres
         points = EnemyInfo.specialPoints;
         damage = EnemyInfo.fastSphereDamage;
     }
-    public override void OnTriggerEnter(Collider other) 
-    {
-        base.OnTriggerEnter(other);
-    }
+    public override void OnTriggerEnter(Collider other) {base.OnTriggerEnter(other);}
     public override void SphereAction()
     {
         LevelManager.Instance.FastTime();
